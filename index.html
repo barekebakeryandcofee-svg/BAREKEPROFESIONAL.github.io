@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Bareke · Panadería & Café | Sistema Profesional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+</head>
+<body>
+    <!-- Pantalla de login (inicialmente visible) -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <h2>BAREKE</h2>
+            <div class="brand-sub">☕ bakery & coffee 🥐</div>
+            <div class="input-group">
+                <input type="text" id="loginUsername" placeholder="Usuario" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="Contraseña">
+                <button class="toggle-password" data-target="loginPassword">👁️</button>
+            </div>
+            <div id="shiftSelectorDiv" style="display: none;">
+                <p>Selecciona tu turno de hoy:</p>
+                <div class="shift-selector">
+                    <button id="shiftMorningBtn" class="shift-btn">🌅 MAÑANA</button>
+                    <button id="shiftAfternoonBtn" class="shift-btn">🌆 TARDE</button>
+                </div>
+            </div>
+            <button class="login-btn" id="loginBtn">INGRESAR</button>
+            <div id="loginError" class="error-msg"></div>
+        </div>
+    </div>
+
+    <!-- Contenedor principal del dashboard (inicialmente oculto) -->
+    <div id="mainApp" style="display: none;">
+        <div id="appHeader"></div>
+        <div id="appSidebar"></div>
+        <div id="mainContent" class="dashboard-content">
+            <!-- Aquí se cargarán los módulos dinámicamente -->
+        </div>
+    </div>
+</body>
+</html>
